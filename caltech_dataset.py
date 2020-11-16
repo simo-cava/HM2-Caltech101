@@ -34,7 +34,7 @@ class Caltech(VisionDataset):
         j=0
         for line in file:
             line = line[:-1]
-            image = Image.open(root+"/"+line)
+            image = pil_loader(root+"/"+line)
             label = line.split("/")[0]
             val_label = dict_label.get(label)
             
