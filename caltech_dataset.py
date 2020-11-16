@@ -21,11 +21,10 @@ class Caltech(VisionDataset):
         self.split = split # This defines the split you are going to use
                            # (split files are called 'train.txt' and 'test.txt')
 
-       
         if split == 'train':
-            file_path='Caltech101/train.txt'
+            self.file_path='Caltech101/train.txt'
         else if split == 'test'
-            file_path='Caltech101/test.txt'
+            self.file_path='Caltech101/test.txt'
         
         self.data = pd.read_csv(file_path)
         self.transform = transform 
