@@ -23,7 +23,7 @@ class Caltech(VisionDataset):
 
         if split == "train":
             self.file_path='Caltech101/train.txt'
-        else if split == "test":
+        elif split == "test":
             self.file_path='Caltech101/test.txt'
         
         self.data = pd.read_csv(file_path)
