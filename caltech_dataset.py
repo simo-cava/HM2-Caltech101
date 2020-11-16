@@ -21,7 +21,7 @@ class Caltech(VisionDataset):
 
         self.split = split # This defines the split you are going to use
                            # (split files are called 'train.txt' and 'test.txt')
-
+        self.file_path = ''
         if split == "train":
             self.file_path='Caltech101/train.txt'
         elif split == "test":
