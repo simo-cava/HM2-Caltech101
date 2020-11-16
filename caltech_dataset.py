@@ -2,6 +2,7 @@ from torchvision.datasets import VisionDataset
 
 from PIL import Image
 
+import pandas as pd
 import os
 import os.path
 import sys
