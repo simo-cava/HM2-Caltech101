@@ -23,9 +23,13 @@ class Caltech(VisionDataset):
 
         '''
         if split == train:
-            file_path=''
+            file_path='Caltech101/train.txt'
         else
-            file_path=''
+            file_path='Caltech101/test.txt'
+        
+        self.data = pd.read_csv(file_path)
+        self.transform = transform 
+        
         
         - Here you should implement the logic for reading the splits files and accessing elements
         - If the RAM size allows it, it is faster to store all data in memory
