@@ -22,12 +22,13 @@ class Caltech(VisionDataset):
                            # (split files are called 'train.txt' and 'test.txt')
 
         '''
-        if split == train:
+        if split == 'train':
             file_path='Caltech101/train.txt'
-        else
+        else if split == 'test'
             file_path='Caltech101/test.txt'
         
         self.data = pd.read_csv(file_path)
+        print(self.data)
         self.transform = transform 
         
         
@@ -64,5 +65,5 @@ class Caltech(VisionDataset):
         The __len__ method returns the length of the dataset
         It is mandatory, as this is used by several other components
         '''
-        length = ... # Provide a way to get the length (number of elements) of the dataset
+        length = len(self.data) # Provide a way to get the length (number of elements) of the dataset
         return length
