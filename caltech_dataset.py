@@ -31,7 +31,7 @@ class Caltech(VisionDataset):
         file = open(self.file_path,"r")
         i=0;
         for line in file:
-            image = Image.open(DATA_DIR+"/"+line)
+            image = Image.open(root+"/"+line)
             dict_data[i] = (line, image)
             i=i+1
         file.close()
