@@ -43,7 +43,7 @@ class Caltech(VisionDataset):
                 j=j+1
                 
             if label != "BACKGROUND_Google" :
-                dict_data[i] = (label, image)
+                dict_data[i] = (dict_label.get(label), image)
                 i=i+1
         file.close()
 
