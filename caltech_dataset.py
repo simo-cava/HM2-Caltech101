@@ -27,7 +27,16 @@ class Caltech(VisionDataset):
         elif split == "test":
             self.file_path='Caltech101/test.txt'
         
-        self.data = pd.read_csv(self.file_path)
+        dict_data = {}
+        file = open(self.file_path,"r")
+        i=0;
+        for line in file:
+            image = Image.open(DATA_DIR+"/"+line)
+            dict_data[i] = (line, image)
+            i=i+1
+        file.close()
+
+        self.data = pd.DataFrame.from_dict(dict_data, orient='index')
         self.transform = transform 
         
         '''
