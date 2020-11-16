@@ -28,7 +28,6 @@ class Caltech(VisionDataset):
             file_path='Caltech101/test.txt'
         
         self.data = pd.read_csv(file_path)
-        print(self.data)
         self.transform = transform 
         
         
@@ -39,7 +38,7 @@ class Caltech(VisionDataset):
           through the index
         - Labels should start from 0, so for Caltech you will have lables 0...100 (excluding the background class) 
         '''
-
+        return self.data
     def __getitem__(self, index):
         '''
         __getitem__ should access an element through its index
